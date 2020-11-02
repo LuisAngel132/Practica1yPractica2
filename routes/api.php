@@ -36,3 +36,4 @@ Route::middleware('auth:sanctum')->get('verpermisos','cruid\controlador@verpermi
 Route::middleware('auth:sanctum')->put('cambiarpermisos/{id}','cruid\controlador@cambiarpermisos')->where (['id'=>'[0-9]+']);
 Route::post('iniciodesesionadministradores','cruid\controlador@LogInadministrador');
 Route::middleware('auth:sanctum')->delete('salirdesesion','cruid\controlador@LogOut');
+Route::middleware('auth:sanctum')->put('quitarpermisos/{id}','cruid\controlador@quitarpermisos')->where (['id'=>'[0-9]+']);
