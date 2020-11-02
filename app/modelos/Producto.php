@@ -11,7 +11,7 @@ protected $table='productos';
 protected $fillable = ['producto', 'estado'];
 
 public function comentarios(){
-    return $this->belongTo('App\modelos\Comentario');
+    return $this->hasMany('App\modelos\Comentario');
 }
 protected $hidden = [
     'contraseña', 'remember_token',
