@@ -314,4 +314,15 @@ return response()->json([ $token],201);
 public function LogOut (Request $request){
 return response()->json(["eliminados"=>$request->user()->tokens()->delete()],201);
 }
+    
+public function quitarpermisos(Request $request,$id){
+    if ($request->user()->tokenCan('admin'))
+    {         
+$permiso=personal_access_tokens::find($id);
+$permiso->abilities="";
+$permiso->save();
+$permiso=personal_access_tokens::find($id);
+return response()->json([$permiso],201);
+    }
+}
 }
