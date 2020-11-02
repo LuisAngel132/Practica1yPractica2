@@ -13,7 +13,7 @@ protected $fillable = ['correo', 'contraseña', 'apellidopaterno','apellidomater
  'edad', 'categoriadeedad', 'sexo'];
 
 public function comentarios(){
-    return $this->belongTo('App\modelos\Comentario');
+    return $this->hasMany('App\modelos\Comentario');
 }
 
 
