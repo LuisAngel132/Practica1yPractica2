@@ -76,7 +76,8 @@ return response()->json([$request->user()],201);
     }
     public function Borrarpersona(Request $request,$id)
     {
-        if ($request->user()->tokenCan('Gratis')||$request->user()->tokenCan('Basica')||$request->user()->tokenCan('Premiun')||$request->user()->tokenCan('Vip') )
+               if ($request->user()->tokenCan('admin') )
+
         {
         $persona= Persona::find($id);
         $persona->delete();
