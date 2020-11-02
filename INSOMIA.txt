@@ -1,0 +1,128 @@
+DELETE
+SALIR DE SESION
+http://127.0.0.1:8000/api/salirdesesion
+'''''''''''''''''''''''''''''''''''''''''POST
+INICIO DE SESION ADMINISTRADORES
+http://127.0.0.1:8000/api/iniciodesesionadministradores
+{
+"correo":"rauk@hotmail.com",	
+"contraseña":"Alberto"
+}
+-----------------------------------------
+PUT
+CAMBIO DE PERMISO
+http://127.0.0.1:8000/api/quitarpermisos/2
+{
+	"abilities":"cantar"
+}
+'''''''''''''''''''''''''''''''''''''''''GET
+VER PERMISOS
+http://127.0.0.1:8000/api/verpermisos
+-----------------------------------------
+PUT
+INICIO DE SESION
+http://127.0.0.1:8000/api/iniciodesesion
+{
+"correo":"rauk@hotmail.com",	
+"contraseña":"Alberto"
+}
+----------------------------------------
+GET
+VER COMENTARIOS POR PERSONA
+http://127.0.0.1:8000/api/vercomentariosporpersona/18
+'''''''''''''''''''''''''''''''''''''''''
+GET VER COMENTARIOS POR PRODUCTO
+http://127.0.0.1:8000/api/vercomentariosporproducto/11
+'''''''''''''''''''''''''''''''''''''''''
+PUT
+ACTUALIZAR comentario
+http://127.0.0.1:8000/api/actualizarcomentario/3
+{
+"titulo":"la comida",
+"comentario":"la comida estuvo bastante sabrosa",
+"persona":"1",	
+"producto":"4"
+
+}
+'''''''''''''''''''''''''''''''''''''''''
+DELETE
+ELIMINAR COMENTARIO
+http://127.0.0.1:8000/api/borrarcomentario/5
+-----------------------------------------
+GET
+VER COMENTARIOS
+http://127.0.0.1:8000/api/vercomentarios
+-----------------------------------------
+POST
+INSERTAR COMENTARIO
+http://127.0.0.1:8000/api/insertarcomentario
+{
+"titulo":"la comida",
+"comentario":"la comida estuvo bastante sabrosa",
+"persona":"1",	
+"producto":"1"
+
+}
+-----------------------------------------
+ACTUALIZAR PRODUCTO
+http://127.0.0.1:8000/api/actualizarproducto/8
+{
+"producto":"ff",
+"estado":"Calidad buena"	
+}
+
+'''''''''''''''''''''''''''''''''''''''''
+DELETE
+ELIMINAR PRODUCTO
+http://127.0.0.1:8000/api/borrarproducto/4
+'''''''''''''''''''''''''''''''''''''''''
+GET
+VER PRODUCTOS
+http://127.0.0.1:8000/api/verproducto
+'''''''''''''''''''''''''''''''''''''''''
+POST
+INSERTAR PRODUCTO
+http://127.0.0.1:8000/api/insertarproducto
+{
+"producto":"agua",
+"estado":"Calidad buena"	
+}
+'''''''''''''''''''''''''''''''''''''''''
+
+PUT
+ACTUALIZAR PERSONA
+http://127.0.0.1:8000/api/actualizar/3
+{
+"nombre":"ricardo",	
+	"apellidopaterno":"Zaragoza",
+	"apellidomaterno":"Dicaprio",
+	"edad":"21",
+	"categoriadeedad":"joven",
+	"categoriaenelforo":"Gratis",
+	"sexo":"F"
+}
+'''''''''''''''''''''''''''''''''''''''''
+DELETE 
+BORRAR PERSONA
+http://127.0.0.1:8000/api/borrar/1
+'''''''''''''''''''''''''''''''''''''''''
+GET
+VER PERSONAS
+http://127.0.0.1:8000/api/ver
+'''''''''''''''''''''''''''''''''''''''''
+POST
+INGRESAR PERSONA O REGISTRAR USUARIO
+http://127.0.0.1:8000/api/insertar
+{
+	"correo":"rauk@hotmail.com",	
+"contraseña":"Alberto",	
+"nombre":"Alberto",	
+	"apellidopaterno":"rios",
+	"apellidomaterno":"Dicaprio",
+	"edad":"22",
+	"categoriaenelforo":"Gratis",
+	"sexo":"F"
+}
+''''''''''''''''''''''''''''''''''''''''
+PUT QUITAR PERMISOS
+http://127.0.0.1:8000/api/quitarpermisos/2
